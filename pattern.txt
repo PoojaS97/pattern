@@ -1,0 +1,41 @@
+
+
+// *********
+// * Hello *
+// * World *
+// * in    *
+// * a     *
+// * frame *
+// *********"
+
+
+let text = ['Hello', 'World', 'in', 'a', 'frame']
+let highChar = 0
+
+for (let i= 0; i< text.length + 2; i++){
+    let char = ''
+    // console.log('here', (text[i - 1]).split(''))
+    // //  highChar = text[i - 1].split('').length
+    if(i === 0){
+        console.log(i)
+        char= char + '*********'
+    }
+    for(let j=0; j< i; j++){
+         if(i===6){
+            char = '*********'
+        }else{
+            // console.log(text[i - 1].split('').length)
+            let curChar = text[i - 1].split('').length
+            let space = ''
+            if(curChar > highChar){
+                highChar = curChar
+            }
+            
+            char = '* ' + text[i - 1] + '\t*'
+            
+        }
+       
+    }
+     console.log(char)
+}
+console.log(highChar)
